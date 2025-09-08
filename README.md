@@ -110,5 +110,3 @@ Open the app: http://localhost:5173 (API at http://localhost:8000/api)
 ## Troubleshooting
 - Postgres SSL errors locally: ensure local DB is used; dev config disables SSL.
 
----
-Made with ❤️ by Khan
