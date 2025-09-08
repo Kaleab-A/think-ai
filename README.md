@@ -5,6 +5,26 @@ Full‑stack meeting scheduling (React + Node + PostgreSQL) with calendar/video 
 <img width="1784" height="988" alt="image" src="https://github.com/user-attachments/assets/f060a017-df50-4e96-86bb-91148531ef68" />
 
 
+## AI‑first assistant (voice → goals → calendar)
+
+KhanFlow’s north star is an AI you can talk to about deadlines, work, and ideas. It organizes your thoughts into actionable plans and schedules focused work blocks on your calendar.
+
+- Voice‑first capture: Speak freely; the assistant (via ElevenLabs Convai) listens and transcribes.
+- Thought organization: Summarizes, extracts goals, breaks them into tasks/subtasks, and prioritizes.
+- Planning & scheduling: Converts tasks into time‑boxed calendar blocks, respecting your availability and preferences.
+- Execution loop: Sends reminders, adapts plans when things slip, and updates tasks as you progress.
+- Integrations: Writes to Google Calendar/Outlook, attaches links for Google Meet/Zoom/Teams when relevant.
+
+Current status
+- The ElevenLabs Convai widget is embedded globally in the frontend for voice input.
+- Replace the default agent ID if needed in `frontend/index.html` (tag `elevenlabs-convai`).
+
+Data flow (high level)
+1) Voice → transcription → structured intents (goals, tasks, dates, constraints)
+2) Planning → schedule proposals → calendar events
+3) Feedback loop → re‑planning on conflicts/slippage
+
+
 ## Quick start
 
 ### Prerequisites
