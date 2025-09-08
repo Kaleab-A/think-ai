@@ -2,7 +2,7 @@
 
 Full‑stack meeting scheduling (React + Node + PostgreSQL) with calendar/video integrations.
 
-<img width="1784" height="988" alt="image" src="https://github.com/user-attachments/assets/f060a017-df50-4e96-86bb-91148531ef68" />
+<img width="584"  alt="image" src="https://github.com/user-attachments/assets/f060a017-df50-4e96-86bb-91148531ef68" />
 
 
 ## AI‑first assistant (voice → goals → calendar)
@@ -23,6 +23,7 @@ Data flow (high level)
 1) Voice → transcription → structured intents (goals, tasks, dates, constraints)
 2) Planning → schedule proposals → calendar events
 3) Feedback loop → re‑planning on conflicts/slippage
+
 
 
 ## Quick start
