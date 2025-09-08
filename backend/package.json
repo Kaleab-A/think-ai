@@ -1,0 +1,48 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev --files src/index.ts",
+    "build": "tsc && cp ./package.json ./dist",
+    "start": "node dist/index.js",
+    "typeorm": "typeorm-ts-node-commonjs -d ./src/config/database.config.ts",
+    "db:generate": "npm run typeorm -- migration:generate ./src/database/migrations/UpdateMeeting_Table",
+    "db:migrate": "npm run typeorm -- migration:run",
+    "db:revert": "npm run typeorm -- migration:revert",
+    "db:drop": "npm run typeorm -- schema:drop"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.1",
+    "cors": "^2.8.5",
+    "date-fns": "^4.1.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "googleapis": "^144.0.0",
+    "google-auth-library": "^9.0.0",
+    "js-base64": "^3.7.7",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.1",
+    "pg": "^8.13.3",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^0.3.20",
+    "uuid": "^11.0.5"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/cors": "^2.8.17",
+    "@types/dotenv": "^8.2.3",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.4",
+    "@types/passport": "^1.0.17",
+    "@types/passport-jwt": "^4.0.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.7.3"
+  }
+}
