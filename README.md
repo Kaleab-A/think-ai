@@ -1,4 +1,4 @@
-# KhanFlow
+# One Stop AI
 
 Full‑stack meeting scheduling (React + Node + PostgreSQL) with calendar/video integrations.
 
