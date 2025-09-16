@@ -15,11 +15,35 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meetly</title>
+    <style>
+      /* Shrink / reposition the ElevenLabs Convai floating widget.
+         Adjust --convai-scale to change size (0.5 = 50%).
+         We use transform + transform-origin to preserve layout and avoid clipping. */
+      :root {
+        --convai-scale: 0.7;
+      }
+      elevenlabs-convai {
+        transform: scale(var(--convai-scale));
+        transform-origin: bottom right;
+        /* Ensure it stays above content but doesn't block interactions when small */
+        z-index: 9999 !important;
+        pointer-events: auto;
+        /* Reduce the visual footprint so it doesn't push layout */
+        display: inline-block;
+      }
+      /* If the widget uses a shadow DOM or inner container we can further target common containers via attribute selectors. */
+    </style>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <elevenlabs-convai agent-id="agent_3201k4gkc1nzfvkts0gb9ms4sed7"></elevenlabs-convai>
-    <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+    <elevenlabs-convai
+      agent-id="agent_3201k4gkc1nzfvkts0gb9ms4sed7"
+    ></elevenlabs-convai>
+    <script
+      src="https://unpkg.com/@elevenlabs/convai-widget-embed"
+      async
+      type="text/javascript"
+    ></script>
   </body>
 </html>
